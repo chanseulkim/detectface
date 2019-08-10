@@ -24,9 +24,8 @@
     <Compile Include="Detector.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="detect_gender_age.py" />
-    <Compile Include="FaceDetect.py" />
-    <Compile Include="predict.py" />
+    <Compile Include="sample_detect_gender_age.py" />
+    <Compile Include="sample_FaceDetect.py" />
     <Compile Include="UserInterface\module1.py">
       <SubType>Code</SubType>
     </Compile>
