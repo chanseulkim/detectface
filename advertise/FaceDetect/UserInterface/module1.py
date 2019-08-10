@@ -13,7 +13,7 @@ detector = Detector.Detector()
 class ShowVideo(QtCore.QObject):
 
     flag = 0
-    image = detector.Read()
+    gender, age, image = detector.Read()
     height, width = image.shape[:2]
 
     VideoSignal1 = QtCore.pyqtSignal(QtGui.QImage)
@@ -28,7 +28,8 @@ class ShowVideo(QtCore.QObject):
 
         run_video = True
         while run_video:
-            image = detector.Read()
+            gender, age, image = detector.Read()
+            print("{}, {} ".format(gender, age))
             color_swapped_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
             qt_image1 = QtGui.QImage(color_swapped_image.data, self.width, self.height, color_swapped_image.strides[0], QtGui.QImage.Format_RGB888)
