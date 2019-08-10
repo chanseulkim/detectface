@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "advertise", "advertise\advertise.pyproj", "{785D4607-AE0F-4600-B572-F34E7B18B9F2}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FaceDetect", "FaceDetect\FaceDetect.pyproj", "{1534BF04-DEF3-4862-9A1F-D7F06EFC90FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{785D4607-AE0F-4600-B572-F34E7B18B9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{785D4607-AE0F-4600-B572-F34E7B18B9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1534BF04-DEF3-4862-9A1F-D7F06EFC90FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1534BF04-DEF3-4862-9A1F-D7F06EFC90FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
