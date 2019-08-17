@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>FaceDetect</Name>
     <RootNamespace>FaceDetect</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,20 +25,24 @@
     <Compile Include="Detector.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="kerasTrain.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="sample_detect_gender_age.py" />
-    <Compile Include="sample_FaceDetect.py" />
+    <Compile Include="detect_gender_webcam.py" />
     <Compile Include="UserInterface\module1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UserInterface\module2.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserInterface\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

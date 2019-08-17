@@ -1,6 +1,6 @@
 
 import sys
-import Detector
+#from Detector import Detector
 import cv2
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton
 
-detector = Detector.Detector()
+detector = Detector()
 camera = cv2.VideoCapture(0)
 
 class VideoPlayer(QtCore.QObject):

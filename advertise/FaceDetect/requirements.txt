@@ -1,0 +1,9 @@
+numpy
+setuptools
+opencv-python
+requests
+progressbar
+tensorflow
+keras
+cvlib
+PyQt5
