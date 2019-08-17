@@ -7,23 +7,12 @@ import argparse
 import cv2
 import os
 import cvlib as cv
-
-#from keras.preprocessing.image import img_to_array
-#from keras.models import load_model
-#from keras.models import Model
-#from keras.models import Sequential
-#from keras.utils import get_file
-#from keras.layers import Input, Convolution2D, ZeroPadding2D, MaxPooling2D, Flatten, Dropout, Activation
-#from PIL import Image
-#import numpy as np
-#import argparse
-#import cv2
-#import os
-#import cvlib as cv
-
-test_filename = "C:\\Users\\ckstm\\Desktop\\git\\detectface\\advertise_backup\\FaceDetect\\youtube.avi"
-pre_traind_path = "C:\\Users\\ckstm\\Desktop\\git\\detectface\\advertise\\FaceDetect\\pre-trained\\vgg16_weights.h5"
-model_path = "pre-trained/gender_detection.model"
+CURRUNT_PATH = os.path.dirname(os.path.realpath(__file__))
+print(CURRUNT_PATH)
+DATA_PATH = CURRUNT_PATH + "/data"
+test_filename = CURRUNT_PATH + "/youtube.avi"
+pre_traind_path = CURRUNT_PATH + "/pre-trained/vgg16_weights.h5"
+model_path = CURRUNT_PATH + "/pre-trained/gender_detection.model"
 
 WEBCAM = 0
 CAM_NUMBER = WEBCAM
@@ -42,7 +31,7 @@ class Detector(object):
     # recognization age
     MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
     #MODEL_MEAN_VALUES = (103.939, 116.779, 123.68)
-    age_net = cv2.dnn.readNetFromCaffe('data/deploy_age.prototxt', 'data/age_net.caffemodel')
+    age_net = cv2.dnn.readNetFromCaffe(DATA_PATH + "/deploy_age.prototxt", DATA_PATH + "/age_net.caffemodel")
     #age_list = ['(0 ~ 9)', '(10 ~ 19)', '(20 ~ 29)', '(30 ~ 49)', '(50 ~ 100)']
     age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)', '(25 ~ 32)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
     webcam = object()
@@ -58,8 +47,8 @@ class Detector(object):
         pass
     @classmethod
     def Detect(cls, frame, isShowRect = False):
-        gender ="unknown"
-        age ="unknown"
+        gender = "unknown"
+        age = "unknown"
         # apply face detection
         face, confidence = cv.detect_face(frame)
 
