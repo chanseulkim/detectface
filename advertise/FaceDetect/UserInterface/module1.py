@@ -1,6 +1,6 @@
 
 import sys
-#from Detector import Detector
+from Detector import Detector
 import cv2
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
